@@ -1,9 +1,9 @@
 import { AxiosRequestConfig } from "axios";
 import { API_MAGIC_DELETE } from "../helper/api";
 import { DataError } from "../helper/DataError";
-import useLayzyAxios from "./useLayzyAxios";
+import { useLayzyAxios } from "./useLayzyAxios";
 
-export default function useLayzyMagicDelete<T>(
+export function useLayzyMagicDelete<T>(
     options?:{
       onCompleted?:(data:T)=>void,
       onError?:(error:any)=>void,

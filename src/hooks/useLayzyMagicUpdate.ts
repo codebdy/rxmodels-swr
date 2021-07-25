@@ -1,9 +1,9 @@
 import { AxiosRequestConfig } from "axios";
 import { API_MAGIC_UPDATE } from "../helper/api";
 import { DataError } from "../helper/DataError";
-import useLayzyAxios from "./useLayzyAxios";
+import { useLayzyAxios } from "./useLayzyAxios";
 
-export default function useLayzyMagicUpdate<T>(
+export function useLayzyMagicUpdate<T>(
     options?:{
       onCompleted?:(data:T)=>void,
       onError?:(error:any)=>void,

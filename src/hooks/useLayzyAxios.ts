@@ -2,11 +2,11 @@ import axios, { AxiosRequestConfig } from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { axiosConfig } from "../helper/axiosConfig";
-import { DataError } from "../DataError";
+import { DataError } from "../helper/DataError";
+import { trimServerUrl } from "../helper/trimServerUrl";
 import { rxModelsSwrConfig } from '../rxModelsSwrConfig';
-import { trimServerUrl } from "../trimServerUrl";
 
-export default function useLayzyAxios<T>(
+export function useLayzyAxios<T>(
     config?:AxiosRequestConfig, 
     options?:{
       onCompleted?:(data:T)=>void,

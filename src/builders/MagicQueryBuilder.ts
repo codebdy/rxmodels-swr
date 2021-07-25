@@ -1,5 +1,5 @@
-import { API_MAGIC_QUERY } from "rxmodels-swr/api";
 import { AxiosRequestConfig } from "axios";
+import { API_MAGIC_QUERY } from "../helper/api";
 import { MagicQueryMeta } from "./MagicQueryMeta";
 import { WhereBuilder } from "./WhereBuilder";
 
