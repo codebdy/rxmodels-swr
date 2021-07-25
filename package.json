@@ -57,8 +57,9 @@
     "dist"
   ],
   "keywords": [
-    "react",
-    "react hooks",
+    "rxdrag",
+    "rxmodels",
+    "rxmodels react hooks",
     "typescript",
     "npm"
   ],
