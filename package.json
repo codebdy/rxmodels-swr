@@ -60,8 +60,8 @@
     "rxdrag",
     "rxmodels",
     "rxmodels react hooks",
-    "typescript",
-    "npm"
+    "rx-models",
+    "rx-models react hooks"
   ],
   "dependencies": {
     "@types/lodash": "^4.14.171",
