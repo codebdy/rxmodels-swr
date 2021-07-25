@@ -1,7 +1,7 @@
 {
   "name": "@rxdrag/rxmodels-swr",
   "version": "0.0.0",
-  "description": "rxModels数据操作辅助类库",
+  "description": "用于存取rxModels数据的React hooks，基于SWR, axios实现",
   "author": "Water.li",
   "license": "MIT",
   "repository": "rxdrag/rxmodels-swr",
