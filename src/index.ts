@@ -16,3 +16,5 @@ export { Paginator } from './helper/Paginator';
 export { QueryResult } from './helper/QueryResult';
 export { DataError } from './helper/DataError';
 
+export { API_MAGIC_QUERY, API_MAGIC_POST, API_MAGIC_UPLOAD, API_MAGIC_DELETE, API_MAGIC_UPDATE} from './helper/api';
+
