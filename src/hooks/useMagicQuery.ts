@@ -1,10 +1,11 @@
-import  { SWRResponse } from "swr";
+import  { SWRConfiguration, SWRResponse } from "swr";
 import { MagicQueryBuilder } from "../builders/MagicQueryBuilder";
 import { DataError } from "../helper/DataError";
 import { QueryResult } from "../helper/QueryResult";
+import { QueryOrPostOption } from "./QueryOrPostOption";
 import { useSWRQuery } from "./useSWRQuery";
 
-export function useMagicQuery<T>(queryMeta?:MagicQueryBuilder, options?:any):SWRResponse<QueryResult<T>, DataError>&{loading?:boolean}{
+export function useMagicQuery<T>(queryMeta?:MagicQueryBuilder, options?:SWRConfiguration&QueryOrPostOption<QueryResult<T>>):SWRResponse<QueryResult<T>, DataError>&{loading?:boolean}{
 
   const rt = useSWRQuery<QueryResult<T>>(queryMeta?.toAxioConfig(), options);
 
