@@ -5,13 +5,11 @@ import { axiosConfig } from "../helper/axiosConfig";
 import { DataError } from "../helper/DataError";
 import { trimServerUrl } from "../helper/trimServerUrl";
 import { rxModelsSwrConfig } from '../rxModelsSwrConfig';
+import { QueryOrPostOption } from "./QueryOrPostOption";
 
 export function useLayzyAxios<T>(
     config?:AxiosRequestConfig, 
-    options?:{
-      onCompleted?:(data:T)=>void,
-      onError?:(error:any)=>void,
-    }      
+    options?: QueryOrPostOption<T>     
   )
   :[(config?:AxiosRequestConfig)=>void, {loading?:boolean, data?:T, error?:DataError}] 
 {

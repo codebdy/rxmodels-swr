@@ -1,12 +1,13 @@
 import { AxiosRequestConfig } from "axios";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import useSWR, { SWRResponse } from "swr";
+import useSWR, { SWRConfiguration, SWRResponse } from "swr";
 import { cache } from 'swr';
 import { fetcher } from "../helper/fetcher";
 import { rxModelsSwrConfig } from "../rxModelsSwrConfig";
+import { QueryOrPostOption } from "./QueryOrPostOption";
 
-export function useSWRQuery<T>(api?:AxiosRequestConfig, options?:any):SWRResponse<T, any>&{loading?:boolean}{
+export function useSWRQuery<T>(api?:AxiosRequestConfig, options?:SWRConfiguration&QueryOrPostOption<T>):SWRResponse<T, any>&{loading?:boolean}{
   const history = useHistory();
   const {onError, ...otherOptions} = options||{};
   const rtValue = useSWR<T>(api?.url||null, fetcher, {
