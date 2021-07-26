@@ -1,9 +1,9 @@
 import { AxiosRequestConfig } from "axios";
-import { API_MAGIC_UPDATE } from "../helper/api";
+import { API_MAGIC_POST } from "../helper/api";
 import { DataError } from "../helper/DataError";
-import { useLayzyAxios } from "./useLayzyAxios";
+import { useLazyAxios } from "./useLazyAxios";
 
-export function useLayzyMagicUpdate<T>(
+export function useLazyMagicPost<T>(
     options?:{
       onCompleted?:(data:T)=>void,
       onError?:(error:any)=>void,
@@ -11,6 +11,6 @@ export function useLayzyMagicUpdate<T>(
   )
   :[(config?:AxiosRequestConfig)=>void, {loading?:boolean, data?:T, error?:DataError}] 
 {
-  const rtValue = useLayzyAxios(API_MAGIC_UPDATE, options);
+  const rtValue = useLazyAxios(API_MAGIC_POST, options);
   return rtValue;
 }

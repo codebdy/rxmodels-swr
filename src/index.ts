@@ -1,8 +1,8 @@
 export { rxModelsSwrConfig, initRxModelsSwr } from './rxModelsSwrConfig';
-export { useLayzyAxios } from './hooks/useLayzyAxios';
-export { useLayzyMagicDelete } from './hooks/useLayzyMagicDelete';
-export { useLayzyMagicPost } from './hooks/useLayzyMagicPost';
-export { useLayzyMagicUpdate } from './hooks/useLayzyMagicUpdate';
+export { useLazyAxios } from './hooks/useLazyAxios';
+export { useLazyMagicDelete } from './hooks/useLazyMagicDelete';
+export { useLazyMagicPost } from './hooks/useLazyMagicPost';
+export { useLazyMagicUpdate } from './hooks/useLazyMagicUpdate';
 export { useMagicQuery } from './hooks/useMagicQuery';
 export { useMagicQueryInfinite } from './hooks/useMagicQueryInfinite';
 export { useSWRQuery } from './hooks/useSWRQuery';

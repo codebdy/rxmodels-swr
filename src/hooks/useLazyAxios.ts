@@ -7,7 +7,7 @@ import { trimServerUrl } from "../helper/trimServerUrl";
 import { rxModelsSwrConfig } from '../rxModelsSwrConfig';
 import { QueryOrPostOption } from "./QueryOrPostOption";
 
-export function useLayzyAxios<T>(
+export function useLazyAxios<T>(
     config?:AxiosRequestConfig, 
     options?: QueryOrPostOption<T>     
   )
