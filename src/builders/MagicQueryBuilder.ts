@@ -7,7 +7,7 @@ const orderBy = 'orderBy'
 export class MagicQueryBuilder{
 
   private _entity: string = '';
-  private _commands: string[] = [];
+  private _directives: string[] = [];
   private _take = "";
   private _skip = "";
   private _fetcher = "";
@@ -69,13 +69,13 @@ export class MagicQueryBuilder{
     return this;
   }
 
-  addEntityCommand(command:string){
-    this._commands.push(`@${command}`);
+  addEntityDirective(directive:string){
+    this._directives.push(`@${directive}`);
     return this;
   }
 
-  setTreeCommand(){
-    this._commands.push(`@tree`);
+  setTreeDirective(){
+    this._directives.push(`@tree`);
     return this;
   }
 
@@ -131,7 +131,7 @@ export class MagicQueryBuilder{
 
   private toQueryString(){
     const queryObj = {} as any;
-    const commands = this._queryMeta ? this._commands.concat(this._queryMeta.commands) : this._commands;
+    const commands = this._queryMeta ? this._directives.concat(this._queryMeta.commands) : this._directives;
     const conditions = this._queryMeta ? {...this._whereGroup.toJSON(), ...this._queryMeta.otherJSON } : this._whereGroup.toJSON();
 
     const pagination = this._isPagination ? `@paginate(${this._pageSize},${this._pageIndex})` :'';
