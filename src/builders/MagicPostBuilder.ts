@@ -2,7 +2,7 @@ export class MagicPostBuilder<T>{
   private _entity:string = '';
   private _datas:T[] = [];
   private _isSingle = false;
-  private _commands: string[] = [];
+  private _directives: string[] = [];
 
   constructor(entity?:string){
     if(entity){
@@ -21,8 +21,8 @@ export class MagicPostBuilder<T>{
     return this;
   }
 
-  addEntityCommand(command:string){
-    this._commands.push(`@${command}`);
+  addEntityDirective(directive:string){
+    this._directives.push(`@${directive}`);
     return this;
   }
 
@@ -38,7 +38,7 @@ export class MagicPostBuilder<T>{
     
   toData(){
     return {
-      [`${this._entity} ${this._commands.join(' ')}`]: this._isSingle ? this._datas[0] : this._datas
+      [`${this._entity} ${this._directives.join(' ')}`]: this._isSingle ? this._datas[0] : this._datas
     };
   }
 }
