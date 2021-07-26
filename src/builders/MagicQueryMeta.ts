@@ -3,7 +3,7 @@ export const TOKEN_ENTITY = 'entity';
 export class MagicQueryMeta{
   private _queryJSON:any;
   private _entity = '';
-  private _commands:string[] = [];
+  private _directives:string[] = [];
   private _otherJSON = {} as any;
 
   constructor(query:string){
@@ -20,7 +20,7 @@ export class MagicQueryMeta{
       const keyStringArray = key.split('@');
       if(keyStringArray[0].trim().toLowerCase() === TOKEN_ENTITY){
         this._entity = this._queryJSON[key];
-        this._commands = keyStringArray.slice(1).map(command => '@' + command);
+        this._directives = keyStringArray.slice(1).map(command => '@' + command);
       }
       else{
         this._otherJSON[key] = this._queryJSON[key];
@@ -37,7 +37,7 @@ export class MagicQueryMeta{
   }
 
   get commands():string[]{
-    return this._commands;
+    return this._directives;
   }
 
   get otherJSON(){
