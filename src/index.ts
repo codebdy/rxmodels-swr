@@ -5,6 +5,7 @@ export { useLayzyMagicPost } from './hooks/useLayzyMagicPost';
 export { useLayzyMagicUpdate } from './hooks/useLayzyMagicUpdate';
 export { useMagicQuery } from './hooks/useMagicQuery';
 export { useMagicQueryInfinite } from './hooks/useMagicQueryInfinite';
+export { useSWRQuery } from './hooks/useSWRQuery';
 
 export { MagicDeleteBuilder } from './builders/MagicDeleteBuilder';
 export { MagicPostBuilder } from './builders/MagicPostBuilder';
