@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import  { useSWRInfinite } from "swr";
-import { QueryResult } from "..";
 import { fetcher } from "../helper/fetcher";
+import { QueryResult } from "../helper/QueryResult";
 import { rxModelsSwrConfig } from "../rxModelsSwrConfig";
 
 export function useMagicQueryInfinite<T>(getKey:(pageIndex: any, previousPageData: any)=>string|null, option?:any){
   const history = useHistory();
-  const rtValue = useSWRInfinite<QueryResult<T>[]>(getKey, fetcher, {errorRetryCount:0, ...option});
+  const rtValue = useSWRInfinite<QueryResult<T[]>>(getKey, fetcher, {errorRetryCount:0, ...option});
   useEffect(()=>{
     if(rtValue?.error?.status === 401){
       history?.push(rxModelsSwrConfig.loginUrl);
