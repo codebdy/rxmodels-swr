@@ -3,6 +3,7 @@ export { useLazyAxios } from './hooks/useLazyAxios';
 export { useLazyMagicDelete } from './hooks/useLazyMagicDelete';
 export { useLazyMagicPost } from './hooks/useLazyMagicPost';
 export { useLazyMagicUpdate } from './hooks/useLazyMagicUpdate';
+export { useLazyMagicUpload } from './hooks/useLazyMagicUpload';
 export { useMagicQuery } from './hooks/useMagicQuery';
 export { useMagicQueryInfinite } from './hooks/useMagicQueryInfinite';
 export { useSWRQuery } from './hooks/useSWRQuery';
