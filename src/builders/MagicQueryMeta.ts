@@ -36,7 +36,7 @@ export class MagicQueryMeta{
     return this._entity;
   }
 
-  get commands():string[]{
+  get directives():string[]{
     return this._directives;
   }
 
