@@ -12,13 +12,13 @@ export function useLazyMagicUpload<T>(
   :[(config?:AxiosRequestConfig)=>void, {loading?:boolean, data?:T, error?:DataError}] 
 {
   const rtValue = useLazyAxios({
-    ...API_MAGIC_UPLOAD, 
-    headers:{
-      ...API_MAGIC_UPLOAD.headers || {},
-      "Content-Type": "multipart/form-data;boundary=" + new Date().getTime()
-    }
-  }, 
-  options
-);
+      ...API_MAGIC_UPLOAD, 
+      headers:{
+        ...(API_MAGIC_UPLOAD.headers || {}),
+        "Content-Type": "multipart/form-data;boundary=" + new Date().getTime()
+      }
+    }, 
+    options
+  );
   return rtValue;
 }
