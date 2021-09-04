@@ -14,6 +14,8 @@ export { MagicQueryBuilder } from './builders/MagicQueryBuilder';
 export { MagicUpdateBuilder } from './builders/MagicUpdateBuilder';
 export { MagicUploadBuilder } from './builders/MagicUploadBuilder';
 
+export { MagicQueryMeta } from './builders/MagicQueryMeta';
+
 export { Paginator } from './helper/Paginator';
 export { QueryResult } from './helper/QueryResult';
 export { DataError } from './helper/DataError';
