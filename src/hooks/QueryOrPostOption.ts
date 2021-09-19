@@ -1,6 +1,6 @@
 import { DataError } from "..";
 
 export interface QueryOrPostOption<T>{
-  onCompleted?:(data:T)=>void,
+  onCompleted?:(data:{[key:string]:T})=>void,
   onError?:(error:DataError)=>void,
 }

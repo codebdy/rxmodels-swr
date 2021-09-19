@@ -5,7 +5,7 @@ import { useLazyAxios } from "./useLazyAxios";
 
 export function useLazyMagicPost<T>(
     options?:{
-      onCompleted?:(data:T)=>void,
+      onCompleted?:(data:{[key:string]:T})=>void,
       onError?:(error:any)=>void,
     }      
   )
