@@ -60,6 +60,11 @@ export class MagicQueryBuilder{
     return this;
   }
 
+  setCount(){
+    this._fetcher = "@count";
+    return this;
+  }
+
   addCondition(field:string, value:any, operator?:string){
     this._whereGroup.addCondition(field, value, operator);
     return this;
