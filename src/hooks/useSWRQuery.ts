@@ -34,5 +34,11 @@ export function useSWRQuery<T>(api?:AxiosRequestConfig, options?:SWRConfiguratio
   if(rtValue?.error?.status === 401){
     rtError = undefined;
   }
+
+  useEffect(()=>{
+    if(rtValue?.data && options?.onCompleted){
+      options?.onCompleted(rtValue?.data);
+    }
+  }, [rtValue?.data]);
   return {...rtValue, loading: !rtValue.data && !rtValue.error && !!api?.url, error:rtError};
 }

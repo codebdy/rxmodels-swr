@@ -31,6 +31,7 @@ export function useLazyAxios<T>(
         config2?.headers && delete config2?.headers;
         config?.headers && delete config?.headers;
       }
+
       axios( {...axiosConfig, ...config, ...config2} ).then(res => {
         setData(res.data);
         setLoading(false);
